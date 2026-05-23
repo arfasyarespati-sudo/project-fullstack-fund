@@ -1,0 +1,369 @@
+/* ==========================================================================
+   RESET & DASAR GLOBAL
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    /* Latar belakang biru gradasi campuran #124170 dan #088395 */
+    background: linear-gradient(135deg, #124170 0%, #088395 100%);
+    background-attachment: fixed;
+    color: #333333;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR STYLING (Gambar 1 - 5 Berwarna Putih)
+   ========================================================================== */
+.main-header {
+    background-color: #FFFFFF;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 45px;
+}
+
+.nav-item {
+    text-decoration: none;
+    /* Tipografi Utama sesuai Spesifikasi */
+    font-family: 'Abhaya Libre', serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #000000;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding-bottom: 5px;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #088395;
+    border-bottom: 3px solid #088395;
+}
+
+/* ==========================================================================
+   STRUKTUR CONTROLLER HALAMAN (TABS)
+   ========================================================================== */
+.app-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-section {
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
+   GAMBAR 1: HOME PAGE STYLING
+   ========================================================================== */
+.home-content {
+    text-align: center;
+    padding: 60px 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.main-headline {
+    font-family: 'Abril Fatface', serif;
+    font-size: 100px;
+    color: #000000;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.sub-headline {
+    font-family: 'Abril Fatface', serif;
+    font-size: 50px;
+    color: #FFFFFF;
+    margin-bottom: 50px;
+}
+
+.cta-button {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #FFFFFF;
+    color: #124170;
+    border: none;
+    padding: 16px 42px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* ==========================================================================
+   KARTU LAYOUT UMUM (Gambar 2, 3, dan 4) - Jarak Rapi & Konsisten
+   ========================================================================== */
+.card-container {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.sidebar-title, .section-title {
+    font-family: 'Abhaya Libre', serif;
+    font-size: 40px;
+    color: #124170;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* FORMAT FORMULIR INPUT */
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    font-size: 15px;
+    color: #124170;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    border: 2px solid #E2E8F0;
+    border-radius: 10px;
+    background-color: #FAFAFA;
+    transition: border-color 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #088395;
+    background-color: #FFFFFF;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(90deg, #124170, #088395);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   GAMBAR 3: TRACKING ORDER STYLING
+   ========================================================================== */
+.order-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F7FAFC;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid #124170;
+}
+
+.order-id-label {
+    font-weight: 600;
+    color: #124170;
+}
+
+.order-status-badge {
+    background-color: #088395;
+    color: #FFFFFF;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    bottom: 5px;
+    width: 2px;
+    background-color: #E2E8F0;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #E2E8F0;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 0 0 2px #E2E8F0;
+}
+
+.timeline-content {
+    padding-left: 8px;
+}
+
+.timeline-title {
+    font-size: 16px;
+    color: #718096;
+}
+
+.timeline-time {
+    font-size: 13px;
+    color: #A0AEC0;
+    margin-top: 2px;
+}
+
+.timeline-item.completed .timeline-dot { background-color: #124170; box-shadow: 0 0 0 2px #124170; }
+.timeline-item.completed .timeline-title { color: #124170; font-weight: 600; }
+.timeline-item.active .timeline-dot { background-color: #088395; box-shadow: 0 0 0 2px #088395; }
+.timeline-item.active .timeline-title { color: #088395; font-weight: 600; }
+
+/* ==========================================================================
+   GAMBAR 4: PROFILE STYLING
+   ========================================================================== */
+.profile-card { text-align: center; }
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, #088395, #124170);
+    color: #FFFFFF;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 15px auto;
+}
+.profile-name { font-family: 'Abhaya Libre', serif; font-size: 28px; color: #124170; }
+.profile-email { font-size: 14px; color: #718096; }
+.profile-info-list { margin: 30px 0; text-align: left; }
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-bottom: 1px solid #E2E8F0;
+}
+.info-label { color: #718096; }
+.info-value { color: #124170; font-weight: 600; }
+.logout-button {
+    background-color: #FFF5F5;
+    color: #E53E3E;
+    border: 1px solid #FED7D7;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   GAMBAR 5: PESANAN SUKSES NOTIFIKASI
+   ========================================================================== */
+.success-card {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding: 45px 35px;
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+.success-icon {
+    width: 70px;
+    height: 70px;
+    background-color: #E6FFFA;
+    color: #319795;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+}
+.success-title { font-family: 'Abhaya Libre', serif; font-size: 36px; color: #2D3748; }
+.success-message { color: #718096; margin: 10px 0 25px 0; font-size: 15px; }
+.success-details {
+    background-color: #F7FAFC;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: left;
+    margin-bottom: 30px;
+    border-left: 4px solid #088395;
+}
+.track-now-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #088395;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   RESPONSIF MOBILE BREAKPOINT
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-links { gap: 20px; }
+    .nav-item { font-size: 24px; }
+    .main-headline { font-size: 50px; }
+    .sub-headline { font-size: 26px; }
+    .card-container, .success-card { padding: 25px 20px; }
+}

@@ -1,0 +1,466 @@
+/* ==========================================================================
+   RESET & DASAR GLOBAL
+   ========================================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Font Quicksand membulat dan rapi untuk body */
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    
+    /* Background Pattern Mesin Cuci + Gradien */
+    background-color: #088395;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='90' height='90' viewBox='0 0 90 90' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-opacity='0.08'%3E%3Crect x='25' y='25' width='40' height='45' rx='5'/%3E%3Ccircle cx='45' cy='52' r='12'/%3E%3Ccircle cx='45' cy='52' r='8' stroke-opacity='0.04'/%3E%3Ccircle cx='35' cy='33' r='2.5' fill='%23ffffff' fill-opacity='0.08' stroke='none'/%3E%3Ccircle cx='43' cy='33' r='2.5' fill='%23ffffff' fill-opacity='0.08' stroke='none'/%3E%3Crect x='51' y='31.5' width='8' height='3' fill='%23ffffff' fill-opacity='0.08' stroke='none' rx='1.5'/%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(135deg, #124170 0%, #088395 100%);
+    background-attachment: fixed;
+    color: #333333;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR STYLING
+   ========================================================================== */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.08);
+}
+
+.navbar {
+    
+    margin: 0 auto;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.brand-logo {
+    height: 70px;
+    width: auto;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+}
+
+.brand-logo:hover {
+    transform: scale(1.08) rotate(-3deg);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: #4A5568;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-item:hover, .nav-item.active {
+    color: #088395;
+    border-bottom: 3px solid #088395;
+}
+
+/* ==========================================================================
+   STRUKTUR CONTROLLER HALAMAN (TABS)
+   ========================================================================== */
+.app-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.page-section {
+    display: none;
+    animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ==========================================================================
+   GAMBAR 1: HOME PAGE STYLING
+   ========================================================================== */
+.home-content {
+    text-align: center;
+    padding: 80px 20px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.main-headline {
+    font-family: 'Nunito', sans-serif;
+    font-size: 85px;
+    font-weight: 900;
+    color: #FFFFFF;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    text-shadow: 0px 8px 24px rgba(0, 0, 0, 0.25);
+    letter-spacing: -1px;
+}
+
+.sub-headline {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #E6FFFA;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    background-color: #FFFFFF;
+    color: #088395;
+    border: none;
+    padding: 20px 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.cta-button:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    color: #124170;
+}
+
+/* ==========================================================================
+   KARTU LAYOUT UMUM
+   ========================================================================== */
+.card-container, .success-card {
+    /* Glassmorphism Effect */
+    background-color: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 28px;
+    padding: 50px;
+    max-width: 650px;
+    margin: 0 auto;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
+    border: 2px solid rgba(255,255,255,0.6);
+}
+
+.section-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+    color: #124170;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* FORMAT FORMULIR INPUT */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-label {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    color: #2D3748;
+    margin-bottom: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    border: 2px solid #E2E8F0;
+    border-radius: 14px;
+    background-color: #F7FAFC;
+    transition: all 0.3s ease;
+    color: #2D3748;
+}
+
+.form-input::placeholder {
+    font-weight: 500;
+    color: #A0AEC0;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #088395;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 5px rgba(8, 131, 149, 0.15);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(135deg, #124170, #088395);
+    color: #FFFFFF;
+    border: none;
+    border-radius: 14px;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(8, 131, 149, 0.3);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(8, 131, 149, 0.45);
+}
+
+/* ==========================================================================
+   GAMBAR 3: TRACKING ORDER STYLING
+   ========================================================================== */
+.order-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px 25px;
+    border-radius: 16px;
+    margin-bottom: 35px;
+    border: 2px solid #EDF2F7;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.order-id-label {
+    font-weight: 700;
+    color: #124170;
+    font-size: 17px;
+}
+
+.order-status-badge {
+    background-color: #088395;
+    color: #FFFFFF;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 5px;
+    bottom: 5px;
+    width: 4px;
+    background-color: #EDF2F7;
+    border-radius: 4px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -38px;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #EDF2F7;
+    border: 5px solid #FFFFFF;
+    box-shadow: 0 0 0 2px #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.timeline-content {
+    padding-left: 15px;
+}
+
+.timeline-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #718096;
+    margin-bottom: 6px;
+}
+
+.timeline-time {
+    font-size: 15px;
+    font-weight: 600;
+    color: #A0AEC0;
+}
+
+.timeline-item.completed .timeline-dot { 
+    background-color: #124170; 
+    box-shadow: 0 0 0 3px #EBF8FF; 
+}
+.timeline-item.completed .timeline-title { color: #124170; }
+        
+.timeline-item.active .timeline-dot { 
+    background-color: #088395; 
+    box-shadow: 0 0 0 5px rgba(8, 131, 149, 0.2); 
+}
+.timeline-item.active .timeline-title { color: #088395; }
+
+/* ==========================================================================
+   GAMBAR 4: PROFILE STYLING
+   ========================================================================== */
+.profile-card { text-align: center; }
+.profile-avatar {
+    width: 110px;
+    height: 110px;
+    background: linear-gradient(135deg, #088395, #124170);
+    color: #FFFFFF;
+    font-family: 'Nunito', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 25px auto;
+    box-shadow: 0 15px 35px rgba(18, 65, 112, 0.3);
+    border: 4px solid #FFFFFF;
+}
+.profile-name { font-family: 'Nunito', sans-serif; font-size: 34px; font-weight: 800; color: #124170; margin-bottom: 5px;}
+.profile-email { font-size: 16px; font-weight: 600; color: #718096; }
+.profile-info-list { margin: 40px 0; text-align: left; }
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 0;
+    border-bottom: 2px dashed #EDF2F7;
+}
+.info-label { color: #718096; font-weight: 600; font-size: 16px; }
+.info-value { color: #2D3748; font-weight: 700; font-size: 16px; }
+.logout-button {
+    width: 100%;
+    background-color: #FFF5F5;
+    color: #E53E3E;
+    border: 2px solid #FED7D7;
+    padding: 18px 24px;
+    border-radius: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.logout-button:hover {
+    background-color: #FED7D7;
+    color: #C53030;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   GAMBAR 5: PESANAN SUKSES NOTIFIKASI
+   ========================================================================== */
+.success-card {
+    max-width: 550px;
+    text-align: center;
+}
+.success-icon {
+    width: 90px;
+    height: 90px;
+    background-color: #E6FFFA;
+    color: #319795;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 30px auto;
+    box-shadow: 0 10px 25px rgba(49, 151, 149, 0.2);
+}
+.success-title { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 42px; color: #2D3748; }
+.success-message { font-weight: 600; color: #718096; margin: 15px 0 35px 0; font-size: 17px; line-height: 1.6; }
+.success-details {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: left;
+    margin-bottom: 40px;
+    border: 2px solid #EDF2F7;
+    border-left: 6px solid #088395;
+    color: #2D3748;
+    font-size: 16px;
+    line-height: 2;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+.track-now-button {
+    width: 100%;
+    padding: 20px;
+    background-color: #088395;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 14px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 25px rgba(8, 131, 149, 0.3);
+}
+.track-now-button:hover {
+    background-color: #066d7c;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(8, 131, 149, 0.4);
+}
+
+/* ==========================================================================
+   RESPONSIF MOBILE BREAKPOINT
+   ========================================================================== */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    .nav-links { gap: 15px; flex-wrap: wrap; justify-content: center; }
+    .nav-item { font-size: 18px; }
+    .main-headline { font-size: 50px; }
+    .sub-headline { font-size: 20px; }
+    .card-container, .success-card { padding: 35px 25px; border-radius: 24px; }
+    .section-title { font-size: 32px; }
+}
