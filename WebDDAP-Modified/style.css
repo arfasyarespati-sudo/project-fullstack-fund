@@ -1,6 +1,4 @@
-/* ==========================================================================
-   RESET & DASAR GLOBAL
-   ========================================================================== */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +6,7 @@
 }
 
 body {
-    /* Font Quicksand membulat dan rapi untuk body */
+    
     font-family: 'Quicksand', sans-serif;
     min-height: 100vh;
     
@@ -23,9 +21,7 @@ body {
     scroll-behavior: smooth;
 }
 
-/* ==========================================================================
-   HEADER / NAVBAR STYLING
-   ========================================================================== */
+/* Header & Navbar */
 .main-header {
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
@@ -95,9 +91,7 @@ body {
     border-bottom: 3px solid #088395;
 }
 
-/* ==========================================================================
-   STRUKTUR CONTROLLER HALAMAN (TABS)
-   ========================================================================== */
+/* Controller */
 .app-container {
     max-width: 1200px;
     margin: 60px auto;
@@ -118,9 +112,7 @@ body {
     to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-/* ==========================================================================
-   GAMBAR 1: HOME PAGE STYLING
-   ========================================================================== */
+/* Home Page */
 .home-content {
     text-align: center;
     padding: 80px 20px;
@@ -168,9 +160,7 @@ body {
     color: #124170;
 }
 
-/* ==========================================================================
-   KARTU LAYOUT UMUM
-   ========================================================================== */
+/* Kartu Layout */
 .card-container, .success-card {
     /* Glassmorphism Effect */
     background-color: rgba(255, 255, 255, 0.92);
@@ -193,7 +183,7 @@ body {
     text-align: center;
 }
 
-/* FORMAT FORMULIR INPUT */
+/* Format Formulir */
 .form-group {
     margin-bottom: 24px;
 }
@@ -257,9 +247,7 @@ body {
     box-shadow: 0 15px 35px rgba(8, 131, 149, 0.45);
 }
 
-/* ==========================================================================
-   GAMBAR 3: TRACKING ORDER STYLING
-   ========================================================================== */
+/* Tracking order */
 .order-info-header {
     display: flex;
     justify-content: space-between;
@@ -353,9 +341,7 @@ body {
 }
 .timeline-item.active .timeline-title { color: #088395; }
 
-/* ==========================================================================
-   GAMBAR 4: PROFILE STYLING
-   ========================================================================== */
+/* Profile */
 .profile-card { text-align: center; }
 .profile-avatar {
     width: 110px;
@@ -403,9 +389,7 @@ body {
     transform: translateY(-2px);
 }
 
-/* ==========================================================================
-   GAMBAR 5: PESANAN SUKSES NOTIFIKASI
-   ========================================================================== */
+/* Pesanan Sukses */
 .success-card {
     max-width: 550px;
     text-align: center;
@@ -458,9 +442,7 @@ body {
     box-shadow: 0 15px 35px rgba(8, 131, 149, 0.4);
 }
 
-/* ==========================================================================
-   RESPONSIF MOBILE BREAKPOINT
-   ========================================================================== */
+/* Responsif Mobile */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
