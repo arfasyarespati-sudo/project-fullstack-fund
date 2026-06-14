@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Page 3</title>
 </head>
 <body>
     <a href="page2.html">
@@ -34,9 +34,65 @@
     </p>
     </div>
 
-    <iframe src="https://www.youtube.com/watch?v=HD13eq_Pmp8">
-
-
+    <iframe src="https://www.youtube.com/watch?v=HD13eq_Pmp8" width="100"height=100>
     </iframe>
+    <br>
+<a href="index.html" target="_blank">
+    <button style="background-color: darkgreen; color: aqua;">
+        click me to go to page 1
+    </button>
+</a>
+<br><br>
+    <button onclick="doSomething()" style="background-color: grey;">
+        change hello below
+    </button>
+
+    <p id="test">
+        Hello
+    </p>
+
+    <script>
+        function doSomething(){
+            document.getElementById("test").innerHTML = "Goodbye";
+        }
+    </script>
+
+    <hr>
+
+    <form action="">
+        <div>
+            <label for="fname">Input your first name:</label>
+            <input id="fname" type="text" placeholder="first name" required>
+        </div>
+            <br>
+        <div>
+            <label for="lname">Input your last name:</label>
+            <input id="lname" type="text" placeholder="last name" required>
+        </div>
+            <br>
+        <div>
+            <label for="pass">input password:</label>
+            <input type="password" id="pass" name="pass" maxlength="8" required>
+        </div>
+            <br>
+        <div>
+            <label for="email">input email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+            <br>
+        <div>
+            <label for="telp">input telephone number:</label>
+            <input type="tel" id="telp" name="telp" required>
+        </div>
+            <br>
+        <div>
+            <input type="reset">
+        </div>
+            <br>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    
 </body>
 </html>
