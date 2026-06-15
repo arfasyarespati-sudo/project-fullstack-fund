@@ -1,10 +1,67 @@
 body{
-    background-color: black;
+    background:linear-gradient(darkblue, black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 h1{
     color: white;
+    font-family:monospace
 }
+
 p{
-    color: white
-    ;
+    color: white;
+    border-style: outset;
+    font-family: consolas;
+    font-style: bold;
+    padding: 5px;
 }
+a{
+    color: white;
+}
+#p1{
+    color:lightcyan;
+    border-color: gold;
+    font-style: italic;
+}
+
+/* page 2*/
+
+#h2{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-style: italic;
+    
+}
+#b2{
+    background-image: url(/images/nightsky.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+div{
+    color: black;
+}
+
+#box1{
+    
+    border:5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background-color: greenyellow;
+    padding: 12px;
+}
+
+#box2{
+    border:5px solid;
+    width: 250px;
+    height: 250px;
+    font-size: 22px;
+    background-color: dodgerblue;
+    padding: 12px;
+}
+
+
