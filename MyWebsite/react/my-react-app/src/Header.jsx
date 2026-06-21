@@ -3,7 +3,7 @@ function Header(){
 
    return(
      <header>
-        <h1>Title</h1>
+        <h1>Pencatat Tugas</h1>
      </header>
    );
 
