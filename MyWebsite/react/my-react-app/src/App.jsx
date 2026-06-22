@@ -1,30 +1,25 @@
-import Header from './Header.jsx'
-import Footer from './Footer.jsx'
-import Paragraph from './Paragraph.jsx';
 
 function App() {
  
   return(
-    <>
-    <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
-      
-      {/* 2. TANTANGAN: Panggil komponen Header yang sudah diimpor tadi di sini */}
-      <Header />
+    <div className="max-w-2x1 mx-auto p-4 flex flex-col gap-4">
+    <Header></Header>
+    </div>
+  );
+}
 
-      {/* Ini adalah form input utama kita sementara */}
-      <div style={{ marginTop: '20px' }}>
-        <input type="text" placeholder="Ketik tugas baru..." />
-        <button>Tambah</button>
-      </div>
+function Header(){
+  return <header className="flex items-center justify-between">
+    <div classname="flex flex-col gap-1">
+      <h1 className="text-3xl font-bold">Habit Tracker</h1>
+      <span className="text-zinc-400 text-sm">1 / 1 done today</span>
+    </div>
+
+    <div>
 
     </div>
-    
-    <Footer></Footer>
-    </>
-  );
- 
-
-
+  </header>
 }
+
 
 export default App
