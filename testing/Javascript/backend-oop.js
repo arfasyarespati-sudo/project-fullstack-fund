@@ -20,7 +20,7 @@ function addActivity(newActivity){
 function deleteActivity(number){
     let index = number - 1;
     if (index >= 0 && index < activity.length) {
-        let deleted = activity.splice(index, 1);
+        let deleted = activity.splice(index, 1); //(nomor index, jumlah yg di delete)
         console.log(`Succesfully deleted number ${number}!`)
     } else {
         console.log("Unknown number!!")
@@ -31,5 +31,7 @@ function deleteActivity(number){
 
 showActivity()
 addActivity("Scroll Instagram")
+addActivity("Take a shower")
 deleteActivity(4)
-deleteActivity(4)
+deleteActivity(2)
+deleteActivity(3)
