@@ -25,13 +25,6 @@ function deleteActivity(number){
     } else {
         console.log("Unknown number!!")
     } 
-    
     showActivity()
 }
 
-showActivity()
-addActivity("Scroll Instagram")
-addActivity("Take a shower")
-deleteActivity(4)
-deleteActivity(2)
-deleteActivity(3)
