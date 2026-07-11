@@ -26,25 +26,5 @@ function getVariantStyles(variant) {
       throw new Error(`Invalid variant: ${variant}`);
   }
 }
-  function getMoreVariant(){
-    switch (variant) {
-      case "primary":
-        return "bg-violet-600 hover:bg-violet-500 text-white";
-      case "secondary":
-        return "bg-zinc-700 hover:bg-zinc-600 text-zinc-400";
-      case "ghost-destructive":
-        return "hover:bg-red-800 text-red-800 hover:text-red-300";
-    }
-  }
-
-  function getLessVariant(){
-    switch(variant) {
-      case "primary":
-        return "border-bottom-color"
-      case "secondary":
-        return "font-variation-settings (@font-face)"
-      case "terniary":
-        return ""
-    }
-  }
+  
   
