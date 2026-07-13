@@ -8,10 +8,8 @@ const quotes = [
 ];
 
 function dapatkanQuoteAcak() {
-    // Generate indeks acak dari 0 sampai (panjang array - 1)
     const indeksAcak = Math.floor(Math.random() * quotes.length);
     
-    // Ambil quote berdasarkan indeks acak tersebut
     const quoteHariIni = quotes[indeksAcak];
     
     console.log("=== QUOTE HARI INI ===");
@@ -19,5 +17,4 @@ function dapatkanQuoteAcak() {
     console.log("======================");
 }
 
-// Jalankan fungsi beberapa kali untuk melihat hasilnya berubah-ubah
 dapatkanQuoteAcak();
