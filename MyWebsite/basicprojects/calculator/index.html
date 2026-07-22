@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys">
+            <button onclick="appendToDisplay('+')" class="btn-liquid-glass operator">+</button>
+            <button onclick="appendToDisplay('7')" class="btn-liquid-glass" >7</button>
+            <button onclick="appendToDisplay('8')" class="btn-liquid-glass">8</button>
+            <button onclick="appendToDisplay('9')" class="btn-liquid-glass">9</button>
+            <button onclick="appendToDisplay('-')" class="btn-liquid-glass operator">-</button>
+            <button onclick="appendToDisplay('4')" class="btn-liquid-glass">4</button>
+            <button onclick="appendToDisplay('5')" class="btn-liquid-glass">5</button>
+            <button onclick="appendToDisplay('6')" class="btn-liquid-glass">6</button>
+            <button onclick="appendToDisplay('*')" class="btn-liquid-glass operator">*</button>
+            <button onclick="appendToDisplay('1')" class="btn-liquid-glass">1</button>
+            <button onclick="appendToDisplay('2')" class="btn-liquid-glass">2</button>
+            <button onclick="appendToDisplay('3')" class="btn-liquid-glass">3</button>
+            <button onclick="appendToDisplay('/')" class="btn-liquid-glass operator">/</button>
+            <button onclick="appendToDisplay('.')" class="btn-liquid-glass">.</button>
+            <button onclick="appendToDisplay('0')" class="btn-liquid-glass" >0</button>
+            <button onclick="clearDisplay()" class="btn-liquid-glass operator">AC</button>
+            <button onclick="calculate()" class="btn-liquid-glass calbut">=</button>
+        </div>
+    </div>
+</body>
+</html>
