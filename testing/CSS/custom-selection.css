@@ -1,0 +1,24 @@
+/* Mengubah background seleksi teks dan menambahkan animasi kilatan cahaya neon */
+.monaco-editor .focused .selected-text {
+    background-color: rgba(0, 255, 150, 0.3) !important;
+}
+
+.monaco-editor .view-lines::selection,
+.monaco-editor .lines-content ::selection {
+    background: linear-gradient(90deg, #00ff87, #60efff) !important;
+    color: #000 !important;
+    text-shadow: 0 0 8px rgba(0, 255, 135, 0.8);
+    animation: neonShimmer 1.5s infinite linear;
+}
+
+@keyframes neonShimmer {
+    0% {
+        filter: brightness(1);
+    }
+    50% {
+        filter: brightness(1.4);
+    }
+    100% {
+        filter: brightness(1);
+    }
+}
